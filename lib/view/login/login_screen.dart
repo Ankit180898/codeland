@@ -1,7 +1,9 @@
 import 'package:codeland/res/constants.dart';
 import 'package:codeland/view/home/home_screen.dart';
 import 'package:codeland/view/login/components/custom_button.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -39,7 +41,21 @@ class _LoginScreenState extends State<LoginScreen> {
               Column(
                 children: [
                   Image.asset("assets/name.png"),
-                  Image.asset("assets/tree_logo.png")
+                  Image.asset("assets/tree_logo.png"),
+                  Text(
+                    "Biomedical  Kiosk",
+                    style: normalText(20, Colors.black, FontWeight.w500),
+                  ),
+                  Align(
+                    alignment: Alignment.centerRight,
+                    child: Padding(
+                      padding:  EdgeInsets.symmetric(horizontal: MediaQuery.of(context).size.width*0.15),
+                      child: Text(
+                        "for HCE’s",
+                        style: normalText(10, primaryColor, FontWeight.w500),
+                      ),
+                    ),
+                  )
                 ],
               ),
               const SizedBox(
@@ -136,7 +152,9 @@ class _LoginScreenState extends State<LoginScreen> {
                                 color: primaryColor,
                                 fontSize: 12,
                                 fontWeight: FontWeight.w400,
-                                decoration: TextDecoration.underline),
+                                decorationThickness: 1,
+                                decoration: TextDecoration.underline,
+                                decorationColor: primaryColor),
                           ))
                     ],
                   ),
@@ -156,6 +174,8 @@ class _LoginScreenState extends State<LoginScreen> {
                                 color: primaryColor,
                                 fontSize: 12,
                                 fontWeight: FontWeight.w400,
+                                decorationColor: primaryColor,
+                                decorationThickness: 1,
                                 decoration: TextDecoration.underline),
                           ))
                     ],
