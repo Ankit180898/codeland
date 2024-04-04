@@ -37,7 +37,7 @@ class _HomeScreenState extends State<HomeScreen> {
         centerTitle: true,
       ),
       body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 24.0),
+        padding: const EdgeInsets.symmetric(horizontal: 32.0),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
@@ -79,7 +79,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   const Spacer(),
                   Expanded(
                     child: CustomButton(
-                      text: "Preview",
+                      text: "View",
                       onPressed: () {
                         if (_image != null) {
                           // Show the uploaded image in a preview dialog

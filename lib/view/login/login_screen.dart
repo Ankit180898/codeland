@@ -31,7 +31,7 @@ class _LoginScreenState extends State<LoginScreen> {
         ),
       ),
       body: Padding(
-        padding: const EdgeInsets.only(top: 24.0, left: 24.0, right: 24.0),
+        padding: const EdgeInsets.only(top: 32.0, left: 32.0, right: 32.0),
         child: Form(
           key: _formKey,
           child: ListView(
@@ -47,7 +47,8 @@ class _LoginScreenState extends State<LoginScreen> {
                   Align(
                     alignment: Alignment.centerRight,
                     child: Padding(
-                      padding:  EdgeInsets.symmetric(horizontal: MediaQuery.of(context).size.width*0.15),
+                      padding: EdgeInsets.symmetric(
+                          horizontal: MediaQuery.of(context).size.width * 0.15),
                       child: Text(
                         "for HCE’s",
                         style: normalText(10, primaryColor, FontWeight.w500),
@@ -109,7 +110,8 @@ class _LoginScreenState extends State<LoginScreen> {
                 onPressed: () {
                   if (_formKey.currentState!.validate()) {
                     Navigator.of(context).pushReplacement(
-                      MaterialPageRoute(builder: (context) => const HomeScreen()),
+                      MaterialPageRoute(
+                          builder: (context) => const HomeScreen()),
                     );
                   } else {
                     // Form fields are invalid, show error message
