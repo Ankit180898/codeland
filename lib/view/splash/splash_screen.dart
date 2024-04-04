@@ -30,6 +30,13 @@ class _SplashScreenState extends State<SplashScreen> {
         child: Container(
           height: MediaQuery.of(context).size.height*0.40,
           decoration: BoxDecoration(
+            boxShadow: [
+              BoxShadow(
+                  blurRadius: 10,
+                  spreadRadius: 0,
+                  offset: const Offset(0, 4),
+                  color: Colors.black.withOpacity(0.5))
+            ],
             color: textColor,
             borderRadius: BorderRadius.circular(63),
           ),
