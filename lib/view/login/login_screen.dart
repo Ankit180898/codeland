@@ -1,9 +1,7 @@
 import 'package:codeland/res/constants.dart';
 import 'package:codeland/view/home/home_screen.dart';
 import 'package:codeland/view/login/components/custom_button.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -111,7 +109,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 onPressed: () {
                   if (_formKey.currentState!.validate()) {
                     Navigator.of(context).pushReplacement(
-                      MaterialPageRoute(builder: (context) => HomeScreen()),
+                      MaterialPageRoute(builder: (context) => const HomeScreen()),
                     );
                   } else {
                     // Form fields are invalid, show error message
