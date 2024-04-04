@@ -41,6 +41,9 @@ class _HomeScreenState extends State<HomeScreen> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            const SizedBox(
+              height: 16.0,
+            ),
             Expanded(
               flex: 2,
               child: DottedBorder(
@@ -82,7 +85,6 @@ class _HomeScreenState extends State<HomeScreen> {
                           // Show the uploaded image in a preview dialog
                           if (_image != null) {
                             showDialog(
-                              
                               context: context,
                               builder: (_) =>
                                   FullScreenImageDialog(image: _image),
