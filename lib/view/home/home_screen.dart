@@ -119,7 +119,7 @@ class _HomeScreenState extends State<HomeScreen> {
   Future getImageFromGallery() async {
     final XFile? image = await _picker.pickImage(
       source: ImageSource.gallery,
-      imageQuality: 50,
+      imageQuality: 70,
       maxWidth: 800,
       maxHeight: 600,
     );
